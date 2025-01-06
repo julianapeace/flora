@@ -32,7 +32,7 @@ import { fileURLToPath } from "url";
 import { ModelProviderName, defaultCharacter, Clients } from "@ai16z/eliza";
 var character = {
   ...defaultCharacter,
-  clients: [Clients.TWITTER],
+  clients: [Clients.DIRECT],
   modelProvider: ModelProviderName.ANTHROPIC,
   name: "justachillagent",
   system: `you are just a chill agent`
