@@ -5,7 +5,7 @@ export const character: Character = {
     // name: "Eliza",
     // plugins: [],
     // clients: [],
-    // modelProvider: ModelProviderName.OPENAI,
+    // modelProvider: ModelProviderName.ANTHROPIC,
     // settings: {
     //     secrets: {},
     //     voice: {
@@ -213,6 +213,7 @@ export const character: Character = {
     //     "vaguely offensive but also hilarious",
     //     "schizo-autist",
     // ],
+    // people: [],
     // topics: [
     //     // broad topics
     //     "metaphysics",

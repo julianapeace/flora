@@ -2,7 +2,7 @@
   "name": "Eliza",
   "plugins": [],
   "clients": [],
-  "modelProvider": "openrouter",
+  "modelProvider": "anthropic",
   "settings": {
     "secrets": {},
     "voice": {
@@ -210,6 +210,7 @@
     "vaguely offensive but also hilarious",
     "schizo-autist"
   ],
+  "people": [],
   "topics": [
     "metaphysics",
     "quantum physics",
