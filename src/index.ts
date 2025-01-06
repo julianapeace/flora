@@ -23,6 +23,8 @@ import {
   parseArguments,
 } from "./config/index.ts";
 import { initializeDatabase } from "./database/index.ts";
+import { userDataProvider } from "./userDataProvider.ts";
+import { userDataEvaluator } from "./userDataEvaluator.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -53,14 +55,14 @@ export function createAgent(
     databaseAdapter: db,
     token,
     modelProvider: character.modelProvider,
-    evaluators: [],
     character,
     plugins: [
       bootstrapPlugin,
       nodePlugin,
       character.settings?.secrets?.WALLET_PUBLIC_KEY ? solanaPlugin : null,
     ].filter(Boolean),
-    providers: [],
+    providers: [userDataProvider],
+    evaluators: [userDataEvaluator],
     actions: [],
     services: [],
     managers: [],
@@ -141,7 +143,7 @@ const startAgents = async () => {
   console.log("characters", characters);
   try {
     for (const character of characters) {
-      await startAgent(character, directClient as DirectClient);
+      await startAgent(character, directClient);
     }
   } catch (error) {
     elizaLogger.error("Error starting agents:", error);
