@@ -20,5 +20,7 @@
     "noEmitOnError": false,
     "moduleDetection": "force",
     "allowArbitraryExtensions": true
-  }
+  },
+  "exclude": ["client"],
+  "include": ["src/**/*"]
 }
