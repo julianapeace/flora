@@ -1,0 +1,16 @@
+actions:
+    - name: myCustomAction
+      path: ./custom_actions/myAction.ts
+
+# plugins:
+#     - name: solana
+#       enabled: true
+#       settings:
+#           network: mainnet-beta
+#           endpoint: https://api.mainnet-beta.solana.com
+
+#     - name: image-generation
+#       enabled: true
+#       settings:
+#           provider: dalle
+#           size: 1024x1024
