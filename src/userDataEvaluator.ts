@@ -9,9 +9,12 @@ interface ExtractedUserInfo {
 
 const isUserDataComplete = (userData: UserData): boolean => {
     // Check if all values exist, are strings, and are not empty/null/undefined
-    return Object.values(userData).every(value => 
+    console.log('[EVALUATOR - IS_USER_DATA_COMPLETE] User data: ', Object.values(userData));
+    let result = Object.values(userData).every(value => 
         value !== undefined
     );
+    console.log('[EVALUATOR - IS_USER_DATA_COMPLETE] Result: ', result);
+    return result;
 };
 
 export const userDataEvaluator: Evaluator = {
@@ -25,7 +28,8 @@ export const userDataEvaluator: Evaluator = {
     ): Promise<boolean> => {
         const cacheKey = getCacheKey(message);
         const userData = await runtime.cacheManager.get<UserData>(cacheKey) || emptyUserData;
-        
+        console.log(`[EVALUATOR - VALIDATE] User data: ${JSON.stringify(userData)}`);
+        console.log(`[EVALUATOR - VALIDATE] Is user data incomplete? ${!isUserDataComplete(userData)}`);
         // Return true if user data is not complete
         return !isUserDataComplete(userData);
     },
@@ -33,8 +37,12 @@ export const userDataEvaluator: Evaluator = {
         runtime: IAgentRuntime,
         message: Memory
     ): Promise<boolean> => {
+        console.log("[EVALUATOR - HANDLER] Running userDataEvaluator");
         const cacheKey = getCacheKey(message)
         const userData = await runtime.cacheManager.get<UserData>(cacheKey) || emptyUserData;
+
+        console.log(`[EVALUATOR - HANDLER] User data: ${JSON.stringify(userData)}`);
+        console.log(`[EVALUATOR - HANDLER] Message: ${message.content.text}`);
 
         // Extract missing user data fields from conversation
         const extractionTemplate = `Analyze the conversation to extract the user information.
@@ -56,6 +64,8 @@ export const userDataEvaluator: Evaluator = {
                 modelClass: ModelClass.SMALL
             }
         ) as ExtractedUserInfo;
+
+        console.log(`[EVALUATOR - HANDLER] Extracted info: ${JSON.stringify(extractedInfo)}`);
 
         // Update cache with any newly extracted fields that were previously undefined
         const updatedUserData = { ...userData };
