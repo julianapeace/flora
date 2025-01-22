@@ -27,7 +27,7 @@ npm install -g pnpm
 
 ### Clone the Repository  
 ```bash
-git clone https://github.com/yourusername/flora.git
+git clone https://github.com/julianapeace/flora.git
 cd flora
 ```
 
@@ -101,6 +101,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or support, feel free to reach out:  
 - Email: support@flora.ai  
-- GitHub Issues: [Submit Here](https://github.com/yourusername/flora/issues)  
+- GitHub Issues: [Submit Here](https://github.com/julianapeace/flora/issues)  
 
 Let’s grow a healthier future, together! 🌱  

@@ -40,7 +40,7 @@
     "yargs": "17.7.2"
   },
   "engines": {
-    "node": ">=22"
+    "node": "23.5.0"
   },
   "pnpm": {
     "overrides": {
