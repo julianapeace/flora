@@ -3,7 +3,12 @@ import { Character, ModelProviderName, defaultCharacter, Clients } from "@elizao
 export const character: Character = {
     name: "Flora",
     modelProvider: ModelProviderName.ANTHROPIC,
-    clients: [Clients.TELEGRAM, Clients.DIRECT, Clients.TWITTER, Clients.DISCORD],
+    clients: [
+        // Clients.TELEGRAM,
+        Clients.DIRECT,
+        // Clients.TWITTER,
+        // Clients.DISCORD
+    ],
     plugins: [],
     settings: {
         voice: {
