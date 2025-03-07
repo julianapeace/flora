@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <!-- Flower petals -->
-  <path d="M50 20 C60 35, 75 35, 70 50 C75 65, 60 65, 50 80 C40 65, 25 65, 30 50 C25 35, 40 35, 50 20" fill="#4ade80" />
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="#f8fafc" />
+  
+  <!-- Flower petals with muted colors -->
+  <path d="M50 20 C60 35, 75 35, 70 50 C75 65, 60 65, 50 80 C40 65, 25 65, 30 50 C25 35, 40 35, 50 20" fill="#84cc16" opacity="0.8" />
   
   <!-- Center of flower -->
-  <circle cx="50" cy="50" r="10" fill="#166534" />
+  <circle cx="50" cy="50" r="10" fill="#4d7c0f" opacity="0.9" />
+  
+  <!-- Leaf -->
+  <path d="M65 70 Q80 75, 70 85" fill="#84cc16" opacity="0.7" />
   
   <!-- Stem -->
-  <path d="M50 85 L50 95" stroke="#166534" stroke-width="5" stroke-linecap="round" />
+  <path d="M50 80 L50 95" stroke="#4d7c0f" stroke-width="3" stroke-linecap="round" opacity="0.9" />
 </svg>
