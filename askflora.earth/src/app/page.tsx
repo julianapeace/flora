@@ -1,114 +1,58 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-green-50">
-      {/* Navigation */}
-      <nav className="bg-transparent absolute w-full z-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <span className="text-green-600 text-2xl font-bold">🌱 askFlora</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#features" className="text-gray-600 hover:text-green-600">Features</a>
-              <a href="#about" className="text-gray-600 hover:text-green-600">About</a>
-              <a href="#contact" className="text-gray-600 hover:text-green-600">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Splash Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-b from-green-50 to-white">
+    <main className="min-h-screen">
+      {/* Hero Banner Section with Flora's Banner Image */}
+      <section className="relative h-screen flex items-center justify-center">
+        {/* Banner background */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/pattern.svg')] opacity-5"></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('https://pbs.twimg.com/profile_banners/1875136496103272448/1741325704/1500x500')",
+              filter: "brightness(0.7)"
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
         </div>
-        <div className="max-w-6xl mx-auto px-4 text-center relative z-1">
-          <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+
+        <div className="max-w-6xl mx-auto px-4 z-10 flex flex-col items-center">
+          {/* Flora's profile image */}
+          <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-xl mb-8">
+            <img
+              src="https://pbs.twimg.com/profile_images/1897883653977587712/5CdHSTYu_400x400.jpg"
+              alt="askFlora"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6">
             askFlora
           </h1>
-          <p className="text-2xl md:text-4xl text-gray-600 mb-4 font-light">
+          <p className="text-2xl md:text-4xl text-white mb-4 font-light">
             Your AI Plant Care Companion
           </p>
-          <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto">
-            Get expert advice for your plants, track their growth, and join a community of plant enthusiasts
-          </p>
-          <button className="bg-green-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-green-700 transition duration-300 shadow-lg">
-            Start Growing Together
-          </button>
-        </div>
-        <div className="absolute bottom-10 left-0 right-0 flex justify-center">
-          <div className="animate-bounce">
-            <a href="#features" className="text-gray-400 hover:text-green-600">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+
+          {/* Social Media Links */}
+          <div className="flex space-x-8 mt-8">
+            <a href="http://x.com/askfloraearth" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition duration-300">
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
               </svg>
+            </a>
+            <a href="https://t.me/askFloraBot" target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-400 transition duration-300">
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.05.01-.22-.08-.32-.09-.09-.23-.06-.33-.03-.14.03-2.24 1.42-3.3 2.11-.62.42-1.18.63-1.69.63-.56 0-1.62-.33-2.42-.6-.97-.3-1.75-.47-1.67-1.01.04-.27.36-.54.98-.83 3.93-1.7 6.55-2.83 7.87-3.39 3.77-1.6 4.56-.36 4.28.75z"></path>
+              </svg>
+            </a>
+            <a href="http://discord.com/" className="text-white hover:text-green-400 transition duration-300">
+              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.385-.403.8-.552 1.163a16.73 16.73 0 0 0-4.962 0 10.63 10.63 0 0 0-.56-1.163.077.077 0 0 0-.079-.036 19.793 19.793 0 0 0-4.885 1.491.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 19.997 19.997 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.372.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.028 19.92 19.92 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.086-2.157-2.42 0-1.338.956-2.42 2.157-2.42 1.21 0 2.176 1.09 2.157 2.42 0 1.334-.956 2.42-2.157 2.42zm7.975 0c-1.183 0-2.157-1.086-2.157-2.42 0-1.338.955-2.42 2.157-2.42 1.21 0 2.176 1.09 2.157 2.42 0 1.334-.946 2.42-2.157 2.42z"></path>
+              </svg>
+              <span className="ml-1 text-xs">Coming Soon</span>
             </a>
           </div>
         </div>
       </section>
-
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose askFlora?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 hover:bg-green-50 rounded-xl transition duration-300">
-              <div className="text-4xl mb-4">🌿</div>
-              <h3 className="text-xl font-semibold mb-2">Expert Plant Care</h3>
-              <p className="text-gray-600">Get personalized advice for your specific plant needs</p>
-            </div>
-            <div className="text-center p-6 hover:bg-green-50 rounded-xl transition duration-300">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-semibold mb-2">Instant Answers</h3>
-              <p className="text-gray-600">No more waiting - get solutions in seconds</p>
-            </div>
-            <div className="text-center p-6 hover:bg-green-50 rounded-xl transition duration-300">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-semibold mb-2">Always Available</h3>
-              <p className="text-gray-600">Access plant care guidance anytime, anywhere</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to become a better plant parent?</h2>
-          <p className="text-xl text-white/90 mb-8">Join thousands of plant enthusiasts who trust askFlora for their plant care needs.</p>
-          <button className="bg-white text-green-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
-            Join Now
-          </button>
-        </div>
-      </section>
-
-      {/* Footer with Social Links */}
-      <footer className="bg-gray-800 text-white py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col items-center justify-center space-y-6">
-            <div className="flex space-x-6">
-              <a href="#" className="hover:text-green-400 transition duration-300">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                </svg>
-              </a>
-              <a href="#" className="hover:text-green-400 transition duration-300">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3 8h-1.35c-.538 0-.65.221-.65.778V10h2l-.209 2H13v7h-3v-7H8v-2h2V8.192C10 6.18 10.858 5 13.415 5H15v3z"></path>
-                </svg>
-              </a>
-              <a href="#" className="hover:text-green-400 transition duration-300">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                </svg>
-              </a>
-            </div>
-            <div className="text-center">
-              <p className="text-gray-400">&copy; 2025 askFlora. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
     </main>
   )
 }

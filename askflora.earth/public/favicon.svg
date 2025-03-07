@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Flower petals -->
+  <path d="M50 20 C60 35, 75 35, 70 50 C75 65, 60 65, 50 80 C40 65, 25 65, 30 50 C25 35, 40 35, 50 20" fill="#4ade80" />
+  
+  <!-- Center of flower -->
+  <circle cx="50" cy="50" r="10" fill="#166534" />
+  
+  <!-- Stem -->
+  <path d="M50 85 L50 95" stroke="#166534" stroke-width="5" stroke-linecap="round" />
+</svg>
