@@ -1,22 +1,5 @@
 # 🌾 Flora: Farming Logic & Operations Resource Assistant 🌱  
 
-**Flora** is your AI-powered companion for farming, designed to assist farmers, agricultural enthusiasts, and regenerative agriculture practitioners in making informed decisions, improving operations, and fostering sustainability. Whether you're a seasoned farmer, a scientist, or just starting your agricultural journey, Flora is here to help you grow better.  
-
----
-
-## 🚜 What Is Flora?  
-Flora (Farming Logic & Operations Resource Assistant) is an AI agent tailored for the agricultural community. She combines cutting-edge machine learning, regenerative agriculture principles, and farmer-friendly tools to provide actionable insights and support in real time.  
-
-Key features include:  
-- **Crop Management**: Advice on planting, harvesting, and crop rotation schedules.  
-- **Soil Health Optimization**: Suggestions on improving microbial health, carbon sequestration, and nutrient balance.  
-- **Weather Monitoring**: Real-time weather alerts and predictions tailored to your location.  
-- **Resource Planning**: Tools for efficient use of water, fertilizers, and other resources.  
-- **Sustainability Guidance**: Recommendations for adopting regenerative farming practices.  
-- **Coffee Cultivation Expertise**: Specialized knowledge for coffee farmers.  
-- **Custom AI Conversations**: Engage with Flora for questions, brainstorming, or learning more about agricultural science.  
-
----
 
 ## 🛠️ Installation  
 
@@ -51,6 +34,7 @@ pnpm build
    pnpm start
    ```  
 2. Interact with Flora via the web interface or chatbot integration.  
+---
 
 ### Example Use Cases  
 - **Crop Management**:  
@@ -59,6 +43,23 @@ pnpm build
   Provide soil data, and Flora will suggest microbial and nutrient optimizations.  
 - **Weather-Driven Decisions**:  
   _"Is it safe to spray pesticides this week?"_  
+
+
+**Flora** is your AI-powered companion for farming, designed to assist farmers, agricultural enthusiasts, and regenerative agriculture practitioners in making informed decisions, improving operations, and fostering sustainability. Whether you're a seasoned farmer, a scientist, or just starting your agricultural journey, Flora is here to help you grow better.  
+
+---
+
+## 🚜 What Is Flora?  
+Flora (Farming Logic & Operations Resource Assistant) is an AI agent tailored for the agricultural community. She combines cutting-edge machine learning, regenerative agriculture principles, and farmer-friendly tools to provide actionable insights and support in real time.  
+
+Key features include:  
+- **Crop Management**: Advice on planting, harvesting, and crop rotation schedules.  
+- **Soil Health Optimization**: Suggestions on improving microbial health, carbon sequestration, and nutrient balance.  
+- **Weather Monitoring**: Real-time weather alerts and predictions tailored to your location.  
+- **Resource Planning**: Tools for efficient use of water, fertilizers, and other resources.  
+- **Sustainability Guidance**: Recommendations for adopting regenerative farming practices.  
+- **Coffee Cultivation Expertise**: Specialized knowledge for coffee farmers.  
+- **Custom AI Conversations**: Engage with Flora for questions, brainstorming, or learning more about agricultural science.  
 
 ---
 
@@ -100,7 +101,6 @@ This project is licensed under the [MIT License](LICENSE).
 ## 💬 Contact  
 
 For questions or support, feel free to reach out:  
-- Email: support@flora.ai  
 - GitHub Issues: [Submit Here](https://github.com/julianapeace/flora/issues)  
 
 Let’s grow a healthier future, together! 🌱  
