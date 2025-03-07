@@ -32,7 +32,7 @@ export default function Home() {
             Your AI Plant Care Companion
           </p>
           <p className="text-lg md:text-xl text-green-200 mb-6 text-center max-w-2xl font-light font-['Quicksand']">
-            Powered by DeSci: Aggregating research from soil scientists and university studies into an accessible AI interface
+            Powered by DeSci: Aggregating research from soil scientists and universities into an accessible friendly AI interface
           </p>
 
           {/* Social Media Links */}
